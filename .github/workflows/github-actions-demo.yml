@@ -8,7 +8,6 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     name: Git Repo Sync
-    if: ${{ github.actor == 'Londones' }}
     steps:
     - uses: actions/checkout@v3
       with:
@@ -16,5 +15,5 @@ jobs:
     - uses: wangchucheng/git-repo-sync@v0.1.0
       with:
         target-url: ${{ secrets.GITLAB_URL }}
-        target-username: ${{ secrets.AWA_GITLAB_USERNAME }}
-        target-token: ${{ secrets.AWA_GITLAB_TOKEN }}
+        target-username: ${{ secrets.GITLAB_USERNAME }}
+        target-token: ${{ secrets.GITLAB_TOKEN }}
