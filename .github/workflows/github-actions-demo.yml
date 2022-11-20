@@ -15,9 +15,16 @@ jobs:
         fetch-depth: 0
     - uses: wangchucheng/git-repo-sync@v0.1.0
       with:
-        # Such as https://github.com/wangchucheng/git-repo-sync.git
         target-url: ${{ secrets.GITLAB_URL }}
-        # Such as wangchucheng
         target-username: ${{ secrets.GITLAB_USERNAME }}
-          # You can store token in your project's 'Setting > Secrets' and reference the name here. Such as ${{ secrets.ACCESS\_TOKEN }}
         target-token: ${{ secrets.GITLAB_TOKEN }}
+    if: ${{ github.triggering_actor == 'Londones' }}
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+    - uses: wangchucheng/git-repo-sync@v0.1.0
+      with:
+        target-url: ${{ secrets.GITLAB_URL }}
+        target-username: ${{ secrets.AWA_GITLAB_USERNAME }}
+        target-token: ${{ secrets.AWA_GITLAB_TOKEN }}
