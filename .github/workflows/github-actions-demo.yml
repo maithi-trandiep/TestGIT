@@ -1,12 +1,12 @@
 name: GitlabSync
 
 on:
-  - push:
-      branches:
-        - 'main'
-        - 'dev'
-        - 'alicia'
-        - 'brancheAwa'
+  push:
+    branches:
+      - 'main'
+      - 'dev'
+      - 'alicia'
+      - 'brancheAwa'
 jobs:
   sync:
     runs-on: ubuntu-latest
