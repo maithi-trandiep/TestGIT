@@ -1,3 +1,3 @@
 # TestGIT
 
-Test command 2
+Test
