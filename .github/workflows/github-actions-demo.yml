@@ -7,13 +7,6 @@ on:
         - 'dev'
         - 'alicia'
         - 'brancheAwa'
-  - delete:
-      branches:
-        - 'main'
-        - 'dev'
-        - 'alicia'
-        - 'brancheAwa'
-
 jobs:
   sync:
     runs-on: ubuntu-latest
